@@ -1,0 +1,28 @@
+<!DOCTYPE html {% load staticfiles %}>
+{% load staticfiles %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Proyecto de Base de Datos.">
+  <meta name="author" content="Manuel Pérez">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+  <title>PowerGym | {% block title %}{% endblock title %}</title>
+  {% load staticfiles %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+  <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/hover.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+</head>
+<body>
+  <h1>Página Principal</h1>
+  {% block content %}{% endblock content %}
+
+  <script src="{% static 'js/materialize.min.js' %}"></script>
+  <script src="{% static 'js/wow.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
