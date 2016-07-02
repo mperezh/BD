@@ -26,11 +26,21 @@ nav {
     nav ul li a:hover {
       color: #FF9800;
     }
-  .fixed {
-    display: fixed;
-  }
+    
+  /* modal login */
+  .input-field input[type=text]:focus + label, .input-field input[type=password]:focus + label {
+     color: #FF9800;
+   }
+   .input-field input[type=text]:focus, .input-field input[type=password]:focus {
+     border-bottom: 2px solid #FF9800;
+   }
+     .input-field .prefix.active {
+       color: #FF9800;
+      }
   
-  
+.banner-background {
+  background-color: rgba(0,0,0,.5);
+}
   
   
   
