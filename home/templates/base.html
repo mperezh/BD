@@ -1,5 +1,4 @@
-<!DOCTYPE html {% load staticfiles %}>
-{% load staticfiles %}
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -18,8 +17,44 @@
   <script src="{% static 'js/jquery.min.js' %}"></script>
 </head>
 <body>
-  <h1>Página Principal</h1>
-  {% block content %}{% endblock content %}
+  <nav>
+    <div class="nav-wrapper container">
+      <a href="" class="brand-logo"><img src="{% static 'img/logo2.png' %}"></img></a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#">INICIO</a></li>
+        <li><a href="#">NOSOTROS</a></li>
+        <li><a href="#">CLASES</a></li>
+        <li><a href="#">ESTRENADORES</a></li>
+        <li><a href="#">CONTACTO</a></li>
+        <li><a class="modal-trigger" href="#login"><i class="material-icons">perm_identity</i></a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="#">INICIO</a></li>
+        <li><a href="#">NOSOTROS</a></li>
+        <li><a href="#">CLASES</a></li>
+        <li><a href="#">ESTRENADORES</a></li>
+        <li><a href="#">CONTACTO</a></li>
+        <div class="divider"></div>
+        <li><a class="modal-trigger" href="#login"><i class="material-icons left">perm_identity</i>Sign In</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <main>
+    <div class="container">
+      <div id="login" class="modal">
+        <div class="modal-content">
+          <h4>Modal Header</h4>
+          <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+      </div>
+    {% block content %}{% endblock content %}
+  </div>
+  </main>
 
   <script src="{% static 'js/materialize.min.js' %}"></script>
   <script src="{% static 'js/wow.min.js' %}"></script>

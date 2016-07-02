@@ -7,3 +7,31 @@
 body {
   background: #DDD;
 }
+
+.brand-logo img{
+  height: 64px;
+}
+
+nav {
+  background: #FFF;
+  box-shadow: none;
+}
+  nav .button-collapse i {
+    color: #FF9800;
+  }
+  nav ul li a {
+    color: #555;
+    font-weight: bold;
+  }
+    nav ul li a:hover {
+      color: #FF9800;
+    }
+  .fixed {
+    display: fixed;
+  }
+  
+  
+  
+  
+  
+  
