@@ -17,17 +17,17 @@ nav {
   box-shadow: none;
 }
   nav .button-collapse i {
-    color: #FF9800;
+    color: #009688;
   }
   nav ul li a {
     color: #555;
     font-weight: bold;
   }
     nav ul li a:hover {
-      color: #FF9800;
+      color: #009688;
     }
     
-  /* modal login */
+  /* modal login 
   .input-field input[type=text]:focus + label, .input-field input[type=password]:focus + label {
      color: #FF9800;
    }
@@ -36,12 +36,27 @@ nav {
    }
      .input-field .prefix.active {
        color: #FF9800;
-      }
-  
-.banner-background {
-  background-color: rgba(0,0,0,.5);
+      }*/
+
+
+.parallax-container {
+  width: 100%;
+  background-color: rgba(0,0,0,.6);
 }
+.bg-content {
+  width: 100%;
+}
+  .presentacion {
+    color: #FFF;
+    width: 100%;
+    height: 200px;
+    text-align: center;
   
-  
-  
-  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -50%;
+  }
+    .presentacion h1 {
+      color: #FFF;
+    }
