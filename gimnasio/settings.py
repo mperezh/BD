@@ -31,13 +31,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'home',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'home',
+    'accounts',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -130,3 +132,7 @@ STATICFILES_DIRS = (
 
 print(os.path.join(BASE_DIR, 'static'))
 #MEDIA_ROOT = os.path.join(BASE_DIR, 'static')
+
+# ACCOUNTS
+LOGIN_URL = '/accounts/login/'
+LOGOUT_URL = '/accounts/logout/'
