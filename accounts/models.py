@@ -7,4 +7,6 @@ from django.conf import settings
 class Usuarios(models.Model):
     
     user = models.OneToOneField(settings.AUTH_USER_MODEL)
-    photho = models.ImageField(upload_to='profiles', blank=True, null=True)
+
+    def __str__(self):
+        return self.user.username
