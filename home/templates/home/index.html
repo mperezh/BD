@@ -3,14 +3,52 @@
 {% block title %}Home{% endblock title %}
 
 {% block content %}
+    <script>
+      $(function() {
+        $("#slider-home").responsiveSlides({
+          speed: 1000
+        });
+      });
+    </script>
     {% load staticfiles %}
-    <div class="parallax-container">
-        <div class="parallax"><img src="{% static 'img/gym1.jpg' %}"></div>
-        <div class="bg-content">
-          <div class="presentacion">
-            <h1>GO BIG OR GO HOME</h1>
+    <div class="slider">
+      <ul class="rslides" id="slider-home">
+        <li>
+          <img src="{% static 'img/gym1.jpg' %}" alt="">
+          <div class="caption">
+            <h3 class="wow fadeInRight">This is our big Tagline!</h3>
+            <h5 class="light grey-text text-lighten-3 wow fadeInRight">Here's our small slogan.</h5>
+          </div>
+        </li>
+        <li>
+          <img src="{% static 'img/gym5.jpg' %}" alt="">
+          <div class="caption">
+            <h3 class="wow fadeInRight">Left Aligned Caption</h3>
+            <h5 class="light grey-text text-lighten-3 wow fadeInRight">Here's our small slogan.</h5>
+          </div>
+        </li>
+        <li>
+          <img src="{% static 'img/gym2.jpg' %}" alt="">
+          <div class="caption">
+            <h3 class="wow fadeInRight">Right Aligned Caption</h3>
+            <h5 class="light grey-text text-lighten-3 wow fadeInRight">Here's our small slogan.</h5>
+          </div>
+        </li>
+      </ul>
+    </div>
+    
+    <section id="sucriptions">
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="suscription-image"></div>
+        </div>
+        <div class="col s12 m6">
+          <div class="row">
+            <div class="col s12">Lorem</div>
+            <div class="col s12">ipsum</div>
+            <div class="col s12">dolor</div>
           </div>
         </div>
       </div>
-
+    </section>
 {% endblock content %}

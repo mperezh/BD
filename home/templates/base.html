@@ -10,11 +10,17 @@
   {% load staticfiles %}
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
   <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/responsiveslides.css' %}">
   <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/hover.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 
   <script src="{% static 'js/jquery.min.js' %}"></script>
+  
+  <script src="{% static 'js/wow.min.js' %}"></script>
+  <script>
+    new WOW().init();
+  </script>
 </head>
 <body>
   <nav>
@@ -65,9 +71,12 @@
   <main>
       {% block content %}{% endblock content %}
   </main>
-
+  <footer>
+    
+  </footer>
+  
+  <script src="{% static 'js/responsiveslides.min.js' %}"></script>
   <script src="{% static 'js/materialize.min.js' %}"></script>
-  <script src="{% static 'js/wow.min.js' %}"></script>
   <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

@@ -80,13 +80,21 @@ WSGI_APPLICATION = 'gimnasio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'gimnasio',
-        'USER': 'root',
+        'NAME': 'c9',
+        'USER': 'mperezh',
         'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '3306',
+        
     }
 }
+
+        #'ENGINE': 'django.db.backends.mysql',
+        #'NAME': 'gimnasio',
+        #'USER': 'root',
+        #'PASSWORD': '',
+        #'HOST': 'localhost',
+        #'PORT': '3306',
 
 
 # Password validation
