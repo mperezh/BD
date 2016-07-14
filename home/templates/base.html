@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Proyecto de Base de Datos.">
   <meta name="author" content="Manuel Pérez">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
   <title>PowerGym | {% block title %}{% endblock title %}</title>
   {% load staticfiles %}
+  <link rel="shortcut icon" href="{% static 'img/favicon.png' %}">
+
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
   <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/responsiveslides.css' %}">
@@ -71,8 +74,21 @@
   <main>
       {% block content %}{% endblock content %}
   </main>
+<<<<<<< HEAD
   <footer>
 
+=======
+  <footer class="page-footer">
+    <div class="container">
+      <img src="{% static 'img/logo2.png' %}"></img>
+      <p>Cada profesional una vez fue un amateur, cada experto una vez fue un principiante, cada soñador una vez tuvo un sueño.</p>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        Copyright © Power Gym 2016. Todos los derechos reservados. Creado por <a href="mperezh.github.io">Manuel Pérez</a>
+      </div>
+    </div>
+>>>>>>> 01d4d5bf35ae61484564c6e63bcd55ffd8c7be26
   </footer>
 
   <script src="{% static 'js/responsiveslides.min.js' %}"></script>

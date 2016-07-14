@@ -8,6 +8,7 @@ body {
   background: #DDD;
 }
 
+/* HEADER */
 .brand-logo img{
   height: 64px;
 }
@@ -17,17 +18,17 @@ nav {
   box-shadow: none;
 }
   nav .button-collapse i {
-    color: #009688;
+    color: #FF9800;
   }
   nav ul li a {
     color: #555;
     font-weight: bold;
   }
     nav ul li a:hover {
-      color: #009688;
+      color: #FF9800;
     }
     
-  /* modal login 
+  /* MODAL LOGIN */
   .input-field input[type=text]:focus + label, .input-field input[type=password]:focus + label {
      color: #FF9800;
    }
@@ -36,6 +37,78 @@ nav {
    }
      .input-field .prefix.active {
        color: #FF9800;
-      }*/
-      
+      }
   
+  
+  .presentacion {
+    text-align: center;
+    padding: 1em 0;
+  }
+  
+  /* SLIDER CONTAINER */
+  .slider {
+    height: 90vh;
+  }
+  
+  /*SECTION BENEFITS*/
+  #benefits {
+    background-color: #FFF;
+    padding: 2em 0;
+  }
+      #benefits .presentacion h4 {
+        margin: 0 auto;
+        font-weight: bold;
+      }
+      #benefits .presentacion p {
+        font-size: 1.3em;
+      }
+      
+    #benefits .content {
+      border-left: .5em #F57C00 solid;
+      padding-left: 1em;
+    }
+      #benefits .content a {
+        border: 1px #FF9800 solid;
+        border-radius: 3px;
+        padding: 10px;
+        color: #212121;
+      }
+      #benefits .content a:hover {
+        color: #FFF;
+      }
+      #benefits .content a:before {
+        background: #FF9800;
+      }
+      
+  /*SECTION CLASSES*/    
+  #classes {
+    padding: 2em 0;
+  }
+    #classes .presentacion h4 {
+      font-weight: bold;
+    }
+    #classes .card-title {
+      color: #212121;
+    }
+  
+  /*SECTION TRAINERS*/    
+  #trainers {
+    background: #F57C00;
+    padding: 2em 0;
+  }
+    #trainers .trainer {
+      background: rgba(255,255,255,.5);
+      border: 2px #FFE0B2 solid;
+      border-radius: 10px;
+      padding: 0 1em;
+    }
+  /*SECTION FOOTER*/
+  .page-footer {
+    text-align: center;
+    background-color: #F57C00 !important;
+    color: #FFF;
+  }
+    .page-footer p {
+      font-style: italic;
+      padding: 10px 0;
+    }
