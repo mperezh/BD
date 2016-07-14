@@ -80,21 +80,20 @@ WSGI_APPLICATION = 'gimnasio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'c9',
-        'USER': 'mperezh',
+        #'NAME': 'c9',
+        'NAME': 'gimnasio',
+        #'USER': 'mperezh',
+        'USER': 'root',
         'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '3306',
         
-    }
-}
-
-        #'ENGINE': 'django.db.backends.mysql',
-        #'NAME': 'gimnasio',
-        #'USER': 'root',
         #'PASSWORD': '',
         #'HOST': 'localhost',
         #'PORT': '3306',
+        
+    }
+}
 
 
 # Password validation
@@ -137,6 +136,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+print (os.path.join(BASE_DIR, 'static'))
 
 
 # ACCOUNTS
