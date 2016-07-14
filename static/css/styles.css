@@ -4,9 +4,9 @@
   box-sizing: border-box;
 }
 
-/*body {
+body {
   background: #DDD;
-}*/
+}
 
 /* HEADER */
 .brand-logo img{
@@ -38,7 +38,13 @@ nav {
      .input-field .prefix.active {
        color: #FF9800;
       }
-      
+  
+  
+  .presentacion {
+    text-align: center;
+    padding: 1em 0;
+  }
+  
   /* SLIDER CONTAINER */
   .slider {
     height: 90vh;
@@ -47,12 +53,8 @@ nav {
   /*SECTION BENEFITS*/
   #benefits {
     background-color: #FFF;
-    padding: .5em 0;
+    padding: 2em 0;
   }
-    #benefits .presentacion {
-      text-align: center;
-      padding: 1em 0;
-    }
       #benefits .presentacion h4 {
         margin: 0 auto;
         font-weight: bold;
@@ -63,7 +65,7 @@ nav {
       
     #benefits .content {
       border-left: .5em #F57C00 solid;
-      padding-left: .3em;
+      padding-left: 1em;
     }
       #benefits .content a {
         border: 1px #FF9800 solid;
@@ -78,7 +80,28 @@ nav {
         background: #FF9800;
       }
       
-      
+  /*SECTION CLASSES*/    
+  #classes {
+    padding: 2em 0;
+  }
+    #classes .presentacion h4 {
+      font-weight: bold;
+    }
+    #classes .card-title {
+      color: #212121;
+    }
+  
+  /*SECTION TRAINERS*/    
+  #trainers {
+    background: #F57C00;
+    padding: 2em 0;
+  }
+    #trainers .trainer {
+      background: rgba(255,255,255,.5);
+      border: 2px #FFE0B2 solid;
+      border-radius: 10px;
+      padding: 0 1em;
+    }
   /*SECTION FOOTER*/
   .page-footer {
     text-align: center;
