@@ -56,63 +56,64 @@
       <div class="container">
         <div class="presentacion wow fadeInRight">
           <h4>NUESTRAS CLASES</h4>
+          <p>Echa un vistazo a nuestras más destacadas clases</p>
         </div>
     
         <div class="content">
           <div class="row">
             <div class="col s12 m6 l3">
-              <div class="card">
+              <div class="card hvr-sweep-to-top">
                 <div class="card-image">
-                  <img src="images/sample-1.jpg">
+                  <img src="{% static 'img/pesas.svg' %}">
                   <span class="card-title">Levantamiento de pesas</span>
                 </div>
                 <div class="card-content center-align">
                   <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
                 </div>
                 <div class="card-action">
-                  <a href="#">This is a link</a>
+                  <a href="#">Leer más</a>
                 </div>
               </div>
             </div>
             <div class="col s12 m6 l3">
-              <div class="card">
+              <div class="card hvr-sweep-to-top">
                 <div class="card-image">
-                  <img src="images/sample-1.jpg">
+                  <img src="{% static 'img/meditation.svg' %}">
                   <span class="card-title">Yoga</span>
                 </div>
                 <div class="card-content center-align">
                   <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
                 </div>
                 <div class="card-action">
-                  <a href="#">This is a link</a>
+                  <a href="#">Leer más</a>
                 </div>
               </div>
             </div>
             <div class="col s12 m6 l3">
-              <div class="card">
+              <div class="card hvr-sweep-to-top">
                 <div class="card-image">
-                  <img src="images/sample-1.jpg">
+                  <img src="{% static 'img/spinning.svg' %}">
                   <span class="card-title">Spinning</span>
                 </div>
                 <div class="card-content center-align">
                   <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
                 </div>
                 <div class="card-action">
-                  <a href="#">This is a link</a>
+                  <a href="#">Leer más</a>
                 </div>
               </div>
             </div>
             <div class="col s12 m6 l3">
-              <div class="card">
+              <div class="card hvr-sweep-to-top">
                 <div class="card-image">
-                  <img src="images/sample-1.jpg">
+                  <img src="{% static 'img/zumba.png' %}">
                   <span class="card-title">Zumba</span>
                 </div>
                 <div class="card-content center-align">
                   <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
                 </div>
                 <div class="card-action">
-                  <a href="#">This is a link</a>
+                  <a href="#">Leer más</a>
                 </div>
               </div>
             </div>
@@ -125,35 +126,88 @@
       <div class="container">
         <div class="presentacion wow fadeInRight">
           <h4>NUESTROS ENTRENADORES</h4>
+          <p>Los mejores entrenadores especializados</p>
         </div>
-        
+
         <div class="content">
-          <div class="row">
-            <div class="col s12 m6">
-              <div class="trainer row">
-                <div class="trainer-img card-image col s4"><img src="images/sample-1.jpg"></div>
-                <div class="trainer-des col s8">
-                  <h5>John Doe</h5>
-                  <h6>TRAINER</h6>
-                  <div class="divider"></div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum sit quam repellat eaque laborum similique molestiae minus sint error necessitatibus!</p>
-                </div>
+          <div id="owl-demo" class="owl-carousel owl-theme">
+            
+            <div class="item trainer row">
+              <div class="trainer-img col s4">
+                <img src="{% static 'img/trainer1.jpg' %}"></img>
+              </div>
+              <div class="trainer-des col s8">
+                <h5>John Doe</h5>
+                <h6>TRAINER</h6>
+                <div class="divider"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore amet sequi ad ut voluptas maiores.</p>
+              </div>
+            </div>
+            <div class="item trainer row">
+              <div class="trainer-img col s4">
+                <img src="{% static 'img/trainer1.jpg' %}"></img>
+              </div>
+              <div class="trainer-des col s8">
+                <h5>John Doe</h5>
+                <h6>TRAINER</h6>
+                <div class="divider"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore amet sequi ad ut voluptas maiores.</p>
+              </div>
+            </div>
+            <div class="item trainer row">
+              <div class="trainer-img col s4">
+                <img src="{% static 'img/trainer1.jpg' %}"></img>
+              </div>
+              <div class="trainer-des col s8">
+                <h5>John Doe</h5>
+                <h6>TRAINER</h6>
+                <div class="divider"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore amet sequi ad ut voluptas maiores.</p>
+              </div>
+            </div>
+            <div class="item trainer row">
+              <div class="trainer-img col s4">
+                <img src="{% static 'img/trainer1.jpg' %}"></img>
+              </div>
+              <div class="trainer-des col s8">
+                <h5>John Doe</h5>
+                <h6>TRAINER</h6>
+                <div class="divider"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore amet sequi ad ut voluptas maiores.</p>
+              </div>
+            </div>
+            <div class="item trainer row">
+              <div class="trainer-img col s4">
+                <img src="{% static 'img/trainer1.jpg' %}"></img>
+              </div>
+              <div class="trainer-des col s8">
+                <h5>John Doe</h5>
+                <h6>TRAINER</h6>
+                <div class="divider"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore amet sequi ad ut voluptas maiores.</p>
+              </div>
+            </div>
+            <div class="item trainer row">
+              <div class="trainer-img col s4">
+                <img src="{% static 'img/trainer1.jpg' %}"></img>
+              </div>
+              <div class="trainer-des col s8">
+                <h5>John Doe</h5>
+                <h6>TRAINER</h6>
+                <div class="divider"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore amet sequi ad ut voluptas maiores.</p>
               </div>
             </div>
             
-            <div class="col s12 m6">
-              <div class="trainer row">
-                <div class="trainer-img card-image col s4"><img src="images/sample-1.jpg"></div>
-                <div class="trainer-des col s8">
-                  <h5>Jane Doe</h5>
-                  <h6>TRAINER</h6>
-                  <div class="divider"></div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum sit quam repellat eaque laborum similique molestiae minus sint error necessitatibus!</p>
-                </div>
-              </div>
-            </div>
+          </div>
+          
+          <div class="customNavigation">
+            <a class="btn prev">Previous</a>
+            <a class="btn next">Next</a>
           </div>
         </div>
       </div>
     </section>
+    
+    
 {% endblock content %}

@@ -9,11 +9,13 @@
 
   <title>PowerGym | {% block title %}{% endblock title %}</title>
   {% load staticfiles %}
-  <link rel="shortcut icon" href="{% static 'img/favicon.png' %}">
+  <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" />
+  <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="image/png" />
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-  <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/responsiveslides.css' %}">
+  <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
   <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/hover.min.css' %}">
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
@@ -68,16 +70,14 @@
       </form>
     </div>
     <div class="modal-footer">
+      <a href="admin" class=" modal-action modal-close waves-effect waves-teal btn-flat">Administrador</a>
       <a href="" class=" modal-action modal-close waves-effect waves-teal btn-flat">Entrar</a>
     </div>
   </div>
   <main>
       {% block content %}{% endblock content %}
   </main>
-<<<<<<< HEAD
-  <footer>
 
-=======
   <footer class="page-footer">
     <div class="container">
       <img src="{% static 'img/logo2.png' %}"></img>
@@ -85,13 +85,13 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-        Copyright © Power Gym 2016. Todos los derechos reservados. Creado por <a href="mperezh.github.io">Manuel Pérez</a>
+        Copyright © Power Gym 2016. Todos los derechos reservados. Creado por <a href="http://mperezh.github.io">Manuel Pérez</a>
       </div>
     </div>
->>>>>>> 01d4d5bf35ae61484564c6e63bcd55ffd8c7be26
   </footer>
 
   <script src="{% static 'js/responsiveslides.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
   <script src="{% static 'js/materialize.min.js' %}"></script>
   <script src="{% static 'js/main.js' %}"></script>
 </body>
