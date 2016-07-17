@@ -137,8 +137,6 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-print (os.path.join(BASE_DIR, 'static'))
-
 
 # ACCOUNTS
 LOGIN_URL = '/accounts/login/'

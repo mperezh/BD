@@ -130,6 +130,7 @@ nav {
     
   /*SECTION FOOTER*/
   .page-footer {
+    margin-top: 0;
     text-align: center;
     background-color: #F57C00 !important;
     color: #FFF;
