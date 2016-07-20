@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.conf import settings
+
 
 urlpatterns = [
     url(r'^', include('home.urls')),
@@ -23,3 +25,12 @@ urlpatterns = [
     url(r'^accounts/', include('accounts.urls')),
 
 ]
+
+if settings.DEBUG:
+    # static files (images, css, javascript, etc.)
+    urlpatterns.append(
+        # /media/:<mixed>path/
+        url(
+            regex=r'^media/(?P<path>.*)$',
+            view='django.views.static.serve',
+            kwargs={'document_root': settings.MEDIA_ROOT}))
