@@ -30,22 +30,22 @@
 <body>
   <nav>
     <div class="nav-wrapper container">
-      <a href="" class="brand-logo"><img src="{% static 'img/logo2.png' %}"></img></a>
+      <a href="home" class="brand-logo"><img src="{% static 'img/logo2.png' %}"></img></a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="#">INICIO</a></li>
-        <li><a href="#">NOSOTROS</a></li>
-        <li><a href="#">CLASES</a></li>
-        <li><a href="#">ESTRENADORES</a></li>
-        <li><a href="#">CONTACTO</a></li>
+        <li><a href="{% url 'home' %}">INICIO</a></li>
+        <li><a href="{% url 'about' %}">NOSOTROS</a></li>
+        <li><a href="classes">CLASES</a></li>
+        <li><a href="trainers">ESTRENADORES</a></li>
+        <li><a href="contact">CONTACTO</a></li>
         <li><a class="modal-trigger" href="#login"><i class="material-icons">perm_identity</i></a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li><a href="#">INICIO</a></li>
-        <li><a href="#">NOSOTROS</a></li>
-        <li><a href="#">CLASES</a></li>
-        <li><a href="#">ESTRENADORES</a></li>
-        <li><a href="#">CONTACTO</a></li>
+        <li><a href="home">INICIO</a></li>
+        <li><a href="{% url 'about' %}">NOSOTROS</a></li>
+        <li><a href="classes">CLASES</a></li>
+        <li><a href="trainers">ESTRENADORES</a></li>
+        <li><a href="contact">CONTACTO</a></li>
         <div class="divider"></div>
         <li><a class="modal-trigger" href="#login"><i class="material-icons left">perm_identity</i>Sign In</a></li>
       </ul>

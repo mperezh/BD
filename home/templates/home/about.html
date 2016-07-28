@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Nosotros{% endblock title %}
+
+{% block content %}
+    {% load staticfiles %}
+    <section id="parallax">
+      <div class="parallax-container">
+        <div class="parallax">
+          <img src="{% static 'img/gym4.jpg' %}">
+        </div>
+      </div>
+    </section>
+    
+    <section id="about">
+      <div class="presentacion">
+        <h4>NOSOTROS</h4>
+      </div>
+      
+      <div class="content">
+        <div class="container">
+          <h5>MISION</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, doloremque, distinctio soluta provident error iure mollitia tempora asperiores recusandae hic quas sint id fugiat rem voluptate molestiae pariatur! Aspernatur, reiciendis, eius, harum, quidem rerum laudantium temporibus accusamus ad inventore laboriosam distinctio corporis maxime assumenda incidunt architecto omnis molestias vel aliquid!</p>
+          <h5>VISION</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, accusamus fuga minus ipsam omnis perspiciatis doloremque ratione eius recusandae velit tempore repudiandae autem ullam cum molestiae soluta corporis illum esse vel rem excepturi aut illo porro. Ut, aperiam, unde, eveniet, atque eaque placeat ratione iste at minima soluta tempora laudantium.</p>
+        </div>
+      </div>
+    </section>
+{% endblock content %}
