@@ -1,3 +1,5 @@
+### accounts/views.py ###
+
 from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.shortcuts import redirect
@@ -81,7 +83,7 @@ def login_view(request):
             else:
                 # Redireccionar informando que la cuenta esta inactiva
                 # Lo dejo como ejercicio al lector :)
-                pass
+                pass 
         mensaje = 'Nombre de usuario o contrasena no valido'
     return render(request, 'accounts/login.html', {'mensaje': mensaje})
     

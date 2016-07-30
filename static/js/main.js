@@ -8,11 +8,11 @@ $(document).ready(function(){
     
     owl.owlCarousel({
         autoPlay: true,
-        items: 2, //10 items above 1000px browser width
-        itemsDesktop: [1000, 2], //5 items between 1000px and 901px
-        itemsDesktopSmall: [900, 2], // betweem 900px and 601px
-        itemsTablet: [600, 2], //2 items between 600 and 0
-        itemsMobile: [479,1] // itemsMobile disabled - inherit from itemsTablet option
+        items: 2, // items above 1000px browser width
+        itemsDesktop: [1000, 2], // 2 items between 1000px and 901px
+        itemsDesktopSmall: [900, 2], // 2 items betweem 900px and 601px
+        itemsTablet: [600, 2], // 2 items between 600px and 480px
+        itemsMobile: [479,1] // 1 item between 479px and 0px
     });
     
     // Custom Navigation Events

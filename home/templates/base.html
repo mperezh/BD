@@ -30,7 +30,7 @@
 <body>
   <nav>
     <div class="nav-wrapper container">
-      <a href="home" class="brand-logo"><img src="{% static 'img/logo2.png' %}"></img></a>
+      <a href="{% url 'home' %}" class="brand-logo"><img src="{% static 'img/logo2.png' %}"></img></a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="{% url 'home' %}">INICIO</a></li>
@@ -38,7 +38,13 @@
         <li><a href="classes">CLASES</a></li>
         <li><a href="trainers">ESTRENADORES</a></li>
         <li><a href="contact">CONTACTO</a></li>
-        <li><a class="modal-trigger" href="#login"><i class="material-icons">perm_identity</i></a></li>
+        {% if user.is_authenticated %}
+          <li><a href="{% url 'accounts.index' %}">{{ user.username }}</a></li>
+          <li><a href="{% url 'accounts.logout' %}">Logout</a></li>
+        {% else %}
+          <li><a class="modal-trigger" href="#login"><i class="material-icons">perm_identity</i></a></li>
+        {% endif %}
+        
       </ul>
       <ul class="side-nav" id="mobile-demo">
         <li><a href="home">INICIO</a></li>
@@ -47,33 +53,40 @@
         <li><a href="trainers">ESTRENADORES</a></li>
         <li><a href="contact">CONTACTO</a></li>
         <div class="divider"></div>
-        <li><a class="modal-trigger" href="#login"><i class="material-icons left">perm_identity</i>Sign In</a></li>
+        {% if user.is_authenticated %}
+          <li><a href="{% url 'accounts.index' %}">{{ user.username }}</a></li>
+          <li><a href="{% url 'accounts.logout' %}">Logout</a></li>
+        {% else %}
+          <li><a class="modal-trigger" href="#login"><i class="material-icons left">perm_identity</i>Sign In</a></li>
+        {% endif %}
       </ul>
     </div>
   </nav>
-  <div id="login" class="modal">
-    <div class="modal-content">
-      <h4><span>Bienvenido.</span> Por favor inicia sesión</h4>
-      <form class="container">
-        <div class="row">
-          <div class="input-field col s12">
-            <i class="material-icons prefix">account_box</i>
-            <input id="username" type="text" class="validate">
-            <label for="username">Usuario</label>
+  {% if not user.is_authenticated %}
+    <div id="login" class="modal">
+      <div class="modal-content">
+        <h4><span>Bienvenido.</span> Por favor inicia sesión</h4>
+        <form class="container">
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">account_box</i>
+              <input id="username" type="text" class="validate">
+              <label for="username">Usuario</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">lock</i>
+              <input id="password" type="password" class="validate">
+              <label for="password">Constraseña</label>
+            </div>
           </div>
-          <div class="input-field col s12">
-            <i class="material-icons prefix">lock</i>
-            <input id="password" type="password" class="validate">
-            <label for="password">Constraseña</label>
-          </div>
-        </div>
-      </form>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <a href="admin" class=" modal-action modal-close waves-effect waves-teal btn-flat">Administrador</a>
+        <a href="" class=" modal-action modal-close waves-effect waves-teal btn-flat">Entrar</a>
+      </div>
     </div>
-    <div class="modal-footer">
-      <a href="admin" class=" modal-action modal-close waves-effect waves-teal btn-flat">Administrador</a>
-      <a href="" class=" modal-action modal-close waves-effect waves-teal btn-flat">Entrar</a>
-    </div>
-  </div>
+  {% endif %}
   <main>
     
       {% include '_messages.html' %}
