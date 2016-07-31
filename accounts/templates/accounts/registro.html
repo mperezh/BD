@@ -4,18 +4,25 @@
 
 {% block content %}
 
-    <div class="container">
         <div class="formRegistro">
             <div class="page-header">
                 <h2 class="center">Registro de Usuario</h2>
             </div>
             
-            <form class="container" method="post" action="" enctype="multipart/form-data">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit" class="btn btn-primary orange">Registrar</button>
-            </form>
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m8 offset-m2 18 offset-12">
+                      <div class="card">
+                            <form method="POST" action="" enctype="multipart/form-data" style="padding: 2em;">
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                                <button type="submit" class="btn btn-primary orange">Registrarme</button>
+                                <a class="right btn-flat"href="{% url 'accounts.login' %}">Iniciar sesion</a>
+                            </form>
+                        </div>  
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
     
 {% endblock content %}

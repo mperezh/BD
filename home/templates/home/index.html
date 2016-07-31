@@ -47,7 +47,7 @@
         <div class="content">
           <h5>Lorem ipsum dolor sit amet.</h5>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, soluta, nihil, nemo molestiae iusto tenetur impedit cum pariatur fuga quidem doloribus eum quia hic ullam corporis recusandae delectus nostrum perspiciatis earum officiis aliquam harum magni nobis beatae magnam fugiat maiores amet quos temporibus deserunt officia minus aperiam exercitationem vero itaque expedita neque saepe accusamus nisi reprehenderit dolor aut laboriosam assumenda eligendi dolore non. Repellat, quis, iure nisi dignissimos officia quibusdam quam facilis consequuntur a illum consectetur nobis nulla temporibus et.</p>
-          {% if not user_is.athenticated %}
+          {% if user_is.athenticated %}
             <a class="hvr-sweep-to-right" href="{% url 'accounts.index' %}">COMIENZA A ENTRENAR HOY</a>
           {% else %}
             <a class="hvr-sweep-to-right" href="{% url 'accounts.registro' %}">COMIENZA A ENTRENAR HOY</a>

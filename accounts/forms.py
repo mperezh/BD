@@ -3,11 +3,11 @@ from django.contrib.auth.models import User
 
 class RegistroUserForm(forms.Form):
     
-    username = forms.CharField(min_length=5)
+    username = forms.CharField(min_length=2)
     email = forms.EmailField()
-    password = forms.CharField(min_length=5, widget=forms.PasswordInput())
-    password2 = forms.CharField(widget=forms.PasswordInput())
-    photo = forms.ImageField(required=False)
+    password = forms.CharField(min_length=4, widget=forms.PasswordInput())
+    password_confirm = forms.CharField(widget=forms.PasswordInput())
+    #photo = forms.ImageField(required=False)
     
     def clean_username(self):
         """Comprueba que no exista un username igual en la db"""
@@ -23,10 +23,10 @@ class RegistroUserForm(forms.Form):
             raise forms.ValidationError('Ya existe un email igual en la db.')
         return email
 
-    def clean_password2(self):
-        """Comprueba que password y password2 sean iguales."""
+    def clean_password_confirm(self):
+        """Comprueba que password y password_confirm sean iguales."""
         password = self.cleaned_data['password']
-        password2 = self.cleaned_data['password2']
-        if password != password2:
+        password_confirm = self.cleaned_data['password_confirm']
+        if password != password_confirm:
             raise forms.ValidationError('Las contrasenas no coinciden.')
-        return password2
+        return password_confirm
