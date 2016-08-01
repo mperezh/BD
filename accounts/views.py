@@ -92,3 +92,4 @@ def logout_view(request):
     logout(request)
     messages.success(request, 'Te has desconectado con exito.')
     return redirect(reverse('accounts.login'))
+    

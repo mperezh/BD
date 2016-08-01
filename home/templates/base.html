@@ -40,7 +40,7 @@
         <li><a href="contact">CONTACTO</a></li>
         {% if user.is_authenticated %}
           <li><a href="{% url 'accounts.index' %}">{{ user.username }}</a></li>
-          <li><a href="{% url 'accounts.logout' %}">Logout</a></li>
+          <li><a href="{% url 'accounts.logout' %}">Salir</a></li>
         {% else %}
           <li><a class="modal-trigger" href="#login"><i class="material-icons">perm_identity</i></a></li>
         {% endif %}
@@ -55,7 +55,7 @@
         <div class="divider"></div>
         {% if user.is_authenticated %}
           <li><a href="{% url 'accounts.index' %}">{{ user.username }}</a></li>
-          <li><a href="{% url 'accounts.logout' %}">Logout</a></li>
+          <li><a href="{% url 'accounts.logout' %}">Salir</a></li>
         {% else %}
           <li><a class="modal-trigger" href="#login"><i class="material-icons left">perm_identity</i>Sign In</a></li>
         {% endif %}
@@ -66,16 +66,17 @@
     <div id="login" class="modal">
       <div class="modal-content">
         <h4><span>Bienvenido.</span> Por favor inicia sesión</h4>
-        <form class="container">
+        <form class="container" method="POST">
+          {% csrf_token %}
           <div class="row">
             <div class="input-field col s12">
               <i class="material-icons prefix">account_box</i>
-              <input id="username" type="text" class="validate">
+              <input type="text" id="username" name="username" class="validate" value="{{ username }}">
               <label for="username">Usuario</label>
             </div>
             <div class="input-field col s12">
               <i class="material-icons prefix">lock</i>
-              <input id="password" type="password" class="validate">
+              <input type="password" name="password" id="password" class="validate">
               <label for="password">Constraseña</label>
             </div>
           </div>
@@ -83,7 +84,7 @@
       </div>
       <div class="modal-footer">
         <a href="admin" class=" modal-action modal-close waves-effect waves-teal btn-flat">Administrador</a>
-        <a href="" class=" modal-action modal-close waves-effect waves-teal btn-flat">Entrar</a>
+        <button type="submit" class="modal-action modal-close waves-effect waves-orange btn-flat">Entrar</button>
       </div>
     </div>
   {% endif %}
