@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Contacto{% endblock title %}
+
+{% block content %}
+    {% load staticfiles %}
+    <section id="about">
+      <div id="parallax">
+        <div class="parallax-container">
+          <div class="parallax">
+            <img src="{% static 'img/gym9.jpg' %}">
+          </div>
+        </div>
+      </div>
+      
+      <div class="content">
+        <div class="container">
+          <div class="presentacion">
+            <h4>CONTACTANOS</h4>
+          </div>
+          
+          <form role="form" action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+{% endblock content %}

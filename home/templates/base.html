@@ -36,7 +36,7 @@
         <li><a href="{% url 'home' %}">INICIO</a></li>
         <li><a href="{% url 'about' %}">NOSOTROS</a></li>
         <li><a href="classes">CLASES</a></li>
-        <li><a href="trainers">ESTRENADORES</a></li>
+        <li><a href="{% url 'trainers' %}">ESTRENADORES</a></li>
         <li><a href="contact">CONTACTO</a></li>
         {% if user.is_authenticated %}
           <li><a href="{% url 'accounts.index' %}">{{ user.username }}</a></li>
@@ -47,10 +47,10 @@
         
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li><a href="home">INICIO</a></li>
+        <li><a href="{% url 'home' %}">INICIO</a></li>
         <li><a href="{% url 'about' %}">NOSOTROS</a></li>
         <li><a href="classes">CLASES</a></li>
-        <li><a href="trainers">ESTRENADORES</a></li>
+        <li><a href="{% url 'trainers' %}">ESTRENADORES</a></li>
         <li><a href="contact">CONTACTO</a></li>
         <div class="divider"></div>
         {% if user.is_authenticated %}

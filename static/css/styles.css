@@ -44,7 +44,11 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
   border-bottom: 1px solid #FF9800;
   box-shadow: 0 1px 0 0 #FF9800;
 }  
-  
+
+/*nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+  line-height: none;
+}*/
+
   .presentacion {
     text-align: center;
     padding: 1em 0;
@@ -157,6 +161,20 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
       border-bottom: 2px solid #F57C00;
     }
     
+    
+  /**********TRAINERS PAGE**********/  
+  #trainersPage #parallax .parallax-container {
+    width: 100%;
+    height: 300px;
+  }
+  #trainersPage .content {
+    padding-bottom: 2em;
+  }
+  #trainersPage .card .card-image img {
+    width: auto;
+    max-height: 300px;
+  }
+  
   /*SECTION FOOTER*/
   .page-footer {
     margin-top: 0 !important;
