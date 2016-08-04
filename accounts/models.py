@@ -7,6 +7,8 @@ from django.conf import settings
 class UserProfile(models.Model):
 
     user = models.OneToOneField(settings.AUTH_USER_MODEL)
+    nombre = models.CharField(max_length=50, default='')
+    apellido = models.CharField(max_length=50, default='')
     
     #photo = models.ImageField(upload_to='profiles', blank=True, null=True)
 
