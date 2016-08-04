@@ -24,8 +24,9 @@ DROP TABLE IF EXISTS `accounts_userprofile`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `accounts_userprofile` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `photo` varchar(100) DEFAULT NULL,
   `user_id` int(11) NOT NULL,
+  `apellido` varchar(50) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `user_id` (`user_id`),
   CONSTRAINT `accounts_userprofile_user_id_92240672_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`)
@@ -38,7 +39,7 @@ CREATE TABLE `accounts_userprofile` (
 
 LOCK TABLES `accounts_userprofile` WRITE;
 /*!40000 ALTER TABLE `accounts_userprofile` DISABLE KEYS */;
-INSERT INTO `accounts_userprofile` VALUES (1,'',2);
+INSERT INTO `accounts_userprofile` VALUES (1,2,'','');
 /*!40000 ALTER TABLE `accounts_userprofile` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -152,7 +153,7 @@ CREATE TABLE `auth_user` (
 
 LOCK TABLES `auth_user` WRITE;
 /*!40000 ALTER TABLE `auth_user` DISABLE KEYS */;
-INSERT INTO `auth_user` VALUES (1,'pbkdf2_sha256$24000$TpVwSWRAe1Yd$VXDCk8mZD8jJ2yRAYD6aNHB6xngSNsPuD/sf3jIPBCg=','2016-07-19 18:28:01',1,'mperezh','','','manuelph14@gmail.com',1,1,'2016-07-14 22:45:49'),(2,'pbkdf2_sha256$24000$LVZsBYX9zjHH$M14lV4YagUQ1cWmtGppjjfe+rqY/D68Msd6PcjCi6NU=','2016-07-23 02:04:22',0,'holas','','','hola@example.com',0,1,'2016-07-17 02:20:01');
+INSERT INTO `auth_user` VALUES (1,'pbkdf2_sha256$24000$TpVwSWRAe1Yd$VXDCk8mZD8jJ2yRAYD6aNHB6xngSNsPuD/sf3jIPBCg=','2016-08-04 14:58:41',1,'mperezh','','','manuelph14@gmail.com',1,1,'2016-07-14 22:45:49'),(2,'pbkdf2_sha256$24000$LVZsBYX9zjHH$M14lV4YagUQ1cWmtGppjjfe+rqY/D68Msd6PcjCi6NU=','2016-07-31 21:33:53',0,'holas','','','hola@example.com',0,1,'2016-07-17 02:20:01');
 /*!40000 ALTER TABLE `auth_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -284,7 +285,7 @@ CREATE TABLE `django_migrations` (
   `name` varchar(255) NOT NULL,
   `applied` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -293,7 +294,7 @@ CREATE TABLE `django_migrations` (
 
 LOCK TABLES `django_migrations` WRITE;
 /*!40000 ALTER TABLE `django_migrations` DISABLE KEYS */;
-INSERT INTO `django_migrations` VALUES (1,'contenttypes','0001_initial','2016-07-07 16:57:59'),(2,'auth','0001_initial','2016-07-07 16:58:00'),(3,'accounts','0001_initial','2016-07-07 16:58:00'),(4,'admin','0001_initial','2016-07-07 16:58:00'),(5,'admin','0002_logentry_remove_auto_add','2016-07-07 16:58:00'),(6,'contenttypes','0002_remove_content_type_name','2016-07-07 16:58:00'),(7,'auth','0002_alter_permission_name_max_length','2016-07-07 16:58:00'),(8,'auth','0003_alter_user_email_max_length','2016-07-07 16:58:00'),(9,'auth','0004_alter_user_username_opts','2016-07-07 16:58:00'),(10,'auth','0005_alter_user_last_login_null','2016-07-07 16:58:00'),(11,'auth','0006_require_contenttypes_0002','2016-07-07 16:58:00'),(12,'auth','0007_alter_validators_add_error_messages','2016-07-07 16:58:00'),(13,'sessions','0001_initial','2016-07-07 16:58:00'),(14,'accounts','0002_auto_20160716_1752','2016-07-16 17:52:40');
+INSERT INTO `django_migrations` VALUES (1,'contenttypes','0001_initial','2016-07-07 16:57:59'),(2,'auth','0001_initial','2016-07-07 16:58:00'),(3,'accounts','0001_initial','2016-07-07 16:58:00'),(4,'admin','0001_initial','2016-07-07 16:58:00'),(5,'admin','0002_logentry_remove_auto_add','2016-07-07 16:58:00'),(6,'contenttypes','0002_remove_content_type_name','2016-07-07 16:58:00'),(7,'auth','0002_alter_permission_name_max_length','2016-07-07 16:58:00'),(8,'auth','0003_alter_user_email_max_length','2016-07-07 16:58:00'),(9,'auth','0004_alter_user_username_opts','2016-07-07 16:58:00'),(10,'auth','0005_alter_user_last_login_null','2016-07-07 16:58:00'),(11,'auth','0006_require_contenttypes_0002','2016-07-07 16:58:00'),(12,'auth','0007_alter_validators_add_error_messages','2016-07-07 16:58:00'),(13,'sessions','0001_initial','2016-07-07 16:58:00'),(14,'accounts','0002_auto_20160716_1752','2016-07-16 17:52:40'),(15,'accounts','0003_auto_20160804_1516','2016-08-04 15:19:17');
 /*!40000 ALTER TABLE `django_migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -319,7 +320,7 @@ CREATE TABLE `django_session` (
 
 LOCK TABLES `django_session` WRITE;
 /*!40000 ALTER TABLE `django_session` DISABLE KEYS */;
-INSERT INTO `django_session` VALUES ('f3g57qkcspxdws29i3xwoqyus7d4w7m5','N2ZmOTM3MmMxYTVkMWRlNGNkYjQwZTMxYjhmNmE3MGZkOGE1NmRiODp7Il9hdXRoX3VzZXJfaGFzaCI6IjkwNGJlY2MzYTIwNTBhMTkwMGEzNjRiNjQ1NmIzNDU5ZDc3YjQxNTYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIyIn0=','2016-08-06 02:04:23'),('zlmnw6f6ojbvseyakm7p6websptalvcf','MTFkYjAxYzkyYjhmZWQ0YzE5ZDdlMGExODFkMzE5NTUxZWI4M2JiYTp7Il9hdXRoX3VzZXJfaGFzaCI6ImIzZTNhMDc4YmVhMjk1ZTdhYWI3MGExOWU3MDAyZThlYTZlOWIyOWYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=','2016-08-02 18:28:01');
+INSERT INTO `django_session` VALUES ('f3g57qkcspxdws29i3xwoqyus7d4w7m5','N2ZmOTM3MmMxYTVkMWRlNGNkYjQwZTMxYjhmNmE3MGZkOGE1NmRiODp7Il9hdXRoX3VzZXJfaGFzaCI6IjkwNGJlY2MzYTIwNTBhMTkwMGEzNjRiNjQ1NmIzNDU5ZDc3YjQxNTYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIyIn0=','2016-08-06 02:04:23'),('qu5xmu5wxat4h9d9o55y1m772qhht0wi','MTFkYjAxYzkyYjhmZWQ0YzE5ZDdlMGExODFkMzE5NTUxZWI4M2JiYTp7Il9hdXRoX3VzZXJfaGFzaCI6ImIzZTNhMDc4YmVhMjk1ZTdhYWI3MGExOWU3MDAyZThlYTZlOWIyOWYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=','2016-08-18 14:58:41');
 /*!40000 ALTER TABLE `django_session` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -332,4 +333,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-07-28  3:33:23
+-- Dump completed on 2016-08-04 15:23:23
