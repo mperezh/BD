@@ -27,11 +27,11 @@ urlpatterns = [
 
 ]
 
-if settings.DEBUG:
+"""if settings.DEBUG:
     # static files (images, css, javascript, etc.)
     urlpatterns.append(
         # /media/:<mixed>path/
         url(
             regex=r'^media/(?P<path>.*)$',
             view='django.views.static.serve',
-            kwargs={'document_root': settings.MEDIA_ROOT}))
+            kwargs=({'document_root': settings.MEDIA_ROOT})))"""

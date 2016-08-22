@@ -31,15 +31,17 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'home',
+    'accounts',
+    'material',
+    'material.frontend',
+    'material.admin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    'home',
-    'accounts',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -80,14 +82,14 @@ WSGI_APPLICATION = 'gimnasio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'c9',
-        #'NAME': 'gimnasio',
-        'USER': 'mperezh',
-        #'USER': 'root',
+        #'NAME': 'c9',
+        'NAME': 'gimnasio',
+        #'USER': 'mperezh',
+        'USER': 'root',
         'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '3306',
-        
+
     }
 }
 
