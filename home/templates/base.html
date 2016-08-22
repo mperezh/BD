@@ -44,7 +44,7 @@
         {% else %}
           <li><a class="modal-trigger" href="#login"><i class="material-icons">perm_identity</i></a></li>
         {% endif %}
-        
+
       </ul>
       <ul class="side-nav" id="mobile-demo">
         <li><a href="{% url 'home' %}">INICIO</a></li>
@@ -83,16 +83,16 @@
         </form>
       </div>
       <div class="modal-footer">
-        <a href="admin" class=" modal-action modal-close waves-effect waves-orange btn-flat">Administrador</a>
+        <a href="{% url 'admin:index' %}" class=" modal-action modal-close waves-effect waves-orange btn-flat">Administrador</a>
         <button type="submit" class="modal-action modal-close waves-effect waves-orange btn-flat">Entrar</button>
       </div>
     </div>
   {% endif %}
   <main>
-    
+
       {% include '_messages.html' %}
       {% block content %}{% endblock content %}
-      
+
   </main>
 
   <footer class="page-footer">

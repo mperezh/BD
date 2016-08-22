@@ -6,7 +6,7 @@ from django.shortcuts import redirect
 from django.core.urlresolvers import reverse
 
 from .forms import RegistroUserForm
-from .models import UserProfile
+from .models import UserProfile, UserRole
 
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
@@ -15,7 +15,7 @@ from django.contrib import messages
 
 
 def registro_usuario_view(request):
-    
+
     if request.method == 'POST':
         # Si el method es post, obtenemos los datos del formulario
         form = RegistroUserForm(request.POST, request.FILES)
@@ -30,11 +30,23 @@ def registro_usuario_view(request):
             username = cleaned_data.get('username')
             password = cleaned_data.get('password')
             email = cleaned_data.get('email')
+            nombre = cleaned_data.get('nombre')
+            apellido = cleaned_data.get('apellido')
+            cedula = cleaned_data.get('cedula')
+            genero = cleaned_data.get('genero')
+            fecha_nacimiento = cleaned_data.get('fecha_nacimiento')
+            telefono = cleaned_data.get('telefono')
+            direccion = cleaned_data.get('direccion')
+            rol = cleaned_data.get('rol')
             photo = cleaned_data.get('photo')
             # E instanciamos un objeto User, con el username y password
             user_model = User.objects.create_user(username=username, password=password)
             # Anadimos el email
             user_model.email = email
+            # Anadimos el nombre
+            user_model.first_name = nombre
+            # Anadimos el apellido
+            user_model.last_name = apellido
             # Y guardamos el objeto, esto guardara los datos en la db.
             user_model.save()
             # Ahora, creamos un objeto UserProfile, aunque no haya incluido
@@ -42,11 +54,27 @@ def registro_usuario_view(request):
             user_profile = UserProfile()
             # Al campo user le asignamos el objeto user_model
             user_profile.user = user_model
+            # Le asignamos los datos Personales
+            user_profile.nombre = nombre
+            user_profile.apellido = apellido
+            user_profile.cedula = cedula
+            user_profile.genero = genero
+            user_profile.fecha_nacimiento = fecha_nacimiento
+            user_profile.telefono = telefono
+            user_profile.direccion = direccion
             # y le asignamos la photo (el campo, permite datos null)
             user_profile.photo = photo
-            # Por ultimo, guardamos tambien el objeto UserProfile
+            # Ahora, guardamos el objeto UserProfile
             user_profile.save()
-            # Ahora, redireccionamos a la pagina accounts/gracias.html
+            # Creamos el objeto UserRole
+            user_role = UserRole()
+            # Hacemos la instancia al usuario
+            user_role.user = user_model
+            # Le asignamos el rol del usuario
+            user_role.rol = rol
+            # Despues guardamos el objeto UserRole
+            user_role.save()
+            # Por ultimo, redireccionamos a la pagina accounts/gracias.html
             # Pero lo hacemos con un redirect.
             return redirect(reverse('accounts.gracias', kwargs={'username': username}))
     else:
@@ -60,7 +88,8 @@ def registro_usuario_view(request):
 
 def gracias_view(request, username):
     return render(request, 'accounts/gracias.html', {'username': username})
-    
+
+
 @login_required
 def index_view(request):
     return render(request, 'accounts/index.html')
@@ -81,15 +110,14 @@ def login_view(request):
                 login(request, user)
                 return redirect(reverse('accounts.index'))
             else:
-                # Redireccionar informando que la cuenta esta inactiva
-                # Lo dejo como ejercicio al lector :)
-                pass 
+                mensaje = 'El usuario se encuentra inactivo'
+                return render(request, 'accounts/login.html', {'mensaje': mensaje})
+                pass
         mensaje = 'Nombre de usuario o contrasena no valido'
     return render(request, 'accounts/login.html', {'mensaje': mensaje})
-    
-    
+
+
 def logout_view(request):
     logout(request)
     messages.success(request, 'Te has desconectado con exito.')
     return redirect(reverse('accounts.login'))
-    

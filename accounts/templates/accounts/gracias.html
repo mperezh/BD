@@ -3,10 +3,11 @@
 {% block title %}Gracias por registrarte{% endblock title %}
 
 {% block content %}
-    
+
     <div class="container">
         <h2>Bienvenido {{ username }}, gracias por registrarte!</h2>
+        
         <a class="right btn-flat"href="{% url 'accounts.index' %}">Ver Perfil</a>
     </div>
-    
+
 {% endblock content %}

@@ -12,6 +12,9 @@
     <h3>Hola de nuevo {{ user.username }}</h3>
     <div>
         <!-- <img src="{{ MEDIA_URL }}{{ user.userprofile.photo }}" alt="Imagen de {{ user.username }}" /> -->
+        {% if user.is_staff %}
+          <a href="{% url 'admin:index' %}" class=" modal-action modal-close waves-effect waves-orange btn-flat">Ir al administrador</a>
+        {% endif %}
     </div>
 </div>
 

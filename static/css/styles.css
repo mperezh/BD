@@ -27,7 +27,7 @@ nav {
     nav ul li a:hover {
       color: #FF9800;
     }
-    
+
   /* MODAL LOGIN */
   .input-field input[type=text]:focus + label, .input-field input[type=password]:focus + label {
      color: #FF9800;
@@ -43,7 +43,7 @@ nav {
 input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
   border-bottom: 1px solid #FF9800;
   box-shadow: 0 1px 0 0 #FF9800;
-}  
+}
 
 /*nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
   line-height: none;
@@ -52,7 +52,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
   .presentacion {
     text-align: center;
     padding: 1em 0;
-    
+
   }
     .presentacion h4 {
       font-weight: 900;
@@ -60,28 +60,28 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
     .presentacion p {
         font-size: 1.3em;
       }
-      
+
   .card-image img {
     width: 90% !important;
     margin: auto;
   }
-  
+
   .sauna {
     background-color: #212121;
   }
-  
+
   /* SLIDER CONTAINER */
   .slider {
     height: 90vh;
   }
-  
+
   /*SECTION BENEFITS*/
   #benefits {
     background-color: #FFF;
     padding: 2em 0;
   }
-  
-      
+
+
     #benefits .content {
       border-left: .5em #F57C00 solid;
       padding-left: 1em;
@@ -98,17 +98,17 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
       #benefits .content a:before {
         background: #FF9800;
       }
-      
-  /*SECTION CLASSES*/    
+
+  /*SECTION CLASSES*/
   #classes {
     padding: 2em 0;
   }
     #classes .card:hover {
-      color: #212121; 
+      color: #212121;
       font-weight: 700;
     }
     #classes .card:before {
-      background-color: rgba(255,152,0,.7); 
+      background-color: rgba(255,152,0,.7);
     }
       #classes .card-title {
         color: #F97C00;
@@ -116,8 +116,8 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
         width: 100%;
         font-weight: 700;
       }
-  
-  /*SECTION TRAINERS*/    
+
+  /*SECTION TRAINERS*/
   #trainers {
     background: #FF9800;
     padding: 2em 0;
@@ -133,7 +133,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
           width: 100%;
           max-height: 196.5px;
         }
-  
+
   /*btn carousel*/
   .customNavigation{
     text-align: center;
@@ -146,23 +146,23 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
     user-select: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
-    
-  
+
+
   /**********ABOUT PAGE**********/
   #about #parallax .parallax-container {
     width: 100%;
     height: 300px;
   }
-  
+
   #about .content {
     padding-bottom: 2em;
   }
     #about .content h5 {
       border-bottom: 2px solid #F57C00;
     }
-    
-    
-  /**********TRAINERS PAGE**********/  
+
+
+  /**********TRAINERS PAGE**********/
   #trainersPage #parallax .parallax-container {
     width: 100%;
     height: 300px;
@@ -174,7 +174,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
     width: auto;
     max-height: 300px;
   }
-  
+
   /*SECTION FOOTER*/
   .page-footer {
     margin-top: 0 !important;
@@ -182,6 +182,12 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
     background-color: #F57C00 !important;
     color: #FFF;
   }
+    .page-footer img {
+      border-radius: 100px;
+      -webkit-box-shadow: 6px 6px 10px 1px rgba(0,0,0,0.5);
+      -moz-box-shadow: 6px 6px 10px 1px rgba(0,0,0,0.5);
+      box-shadow: 6px 6px 10px 1px rgba(0,0,0,0.5);
+    }
     .page-footer p {
       font-style: italic;
       padding: 10px 0;
